@@ -1,0 +1,47 @@
+{
+  "name": "middleware_jwt",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "generate": "drizzle-kit generate:pg --schema=./src/lib/db/schema/*",
+    "drop": "drizzle-kit drop --out=drizzle",
+    "migrate": "node -r esbuild-register src/lib/db/migrate.ts",
+    "drizzle": "drizzle-kit studio --port 5555"
+  },
+  "dependencies": {
+    "@hookform/resolvers": "^3.2.0",
+    "@types/node": "20.5.1",
+    "@types/react": "18.2.20",
+    "@types/react-dom": "18.2.7",
+    "@vercel/postgres": "^0.4.1",
+    "autoprefixer": "10.4.15",
+    "bcryptjs": "^2.4.3",
+    "dotenv": "^16.3.1",
+    "drizzle-orm": "^0.28.2",
+    "esbuild-register": "^3.4.2",
+    "eslint": "8.47.0",
+    "eslint-config-next": "13.4.19",
+    "jose": "^4.14.4",
+    "next": "13.4.19",
+    "pg": "^8.11.3",
+    "pgshims": "github:neondatabase/serverless",
+    "postcss": "8.4.28",
+    "postgres": "^3.3.5",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "react-hook-form": "^7.45.4",
+    "react-hot-toast": "^2.4.1",
+    "react-icons": "^4.10.1",
+    "tailwindcss": "3.3.3",
+    "typescript": "5.1.6",
+    "zod": "^3.22.2"
+  },
+  "devDependencies": {
+    "@types/bcryptjs": "^2.4.2",
+    "drizzle-kit": "^0.19.13"
+  }
+}

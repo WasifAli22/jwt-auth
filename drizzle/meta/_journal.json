@@ -1,0 +1,20 @@
+{
+  "version": "5",
+  "dialect": "pg",
+  "entries": [
+    {
+      "idx": 0,
+      "version": "5",
+      "when": 1692689898900,
+      "tag": "0000_eager_freak",
+      "breakpoints": true
+    },
+    {
+      "idx": 1,
+      "version": "5",
+      "when": 1714822857772,
+      "tag": "0001_huge_skullbuster",
+      "breakpoints": true
+    }
+  ]
+}

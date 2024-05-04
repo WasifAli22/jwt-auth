@@ -1,0 +1,24 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .form {
+    @apply bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500
+  }
+  .label {
+    @apply block mb-2 text-sm font-medium text-gray-900 dark:text-white
+  }
+  .error {
+    @apply text-sm text-red-500 ml-2
+  }
+  .nbtn {
+    @apply px-[24px] py-[12px] hover:bg-gradient-to-t  bg-gradient-to-b from-pink-500 to-yellow-400 text-white text-base rounded-[6px] md:text-[24px] font-normal
+  }
+  .btn {
+    @apply border items-center justify-center flex mx-auto bg-teal-400 font-bold  hover:bg-black hover:text-white ease-in duration-300 px-6 py-2 rounded-lg
+  }
+  .dotbtn {
+    @apply items-center bg-black text-white justify-center flex mx-auto  font-bold  ease-in duration-300 px-6 py-2 rounded-lg
+  }
+}
