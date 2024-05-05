@@ -37,7 +37,7 @@ export default function LoginPage() {
         const toastId = toast.loading("Redirecting...");
         toast.dismiss(toastId);
         reset();
-        router.push("/");
+        router.push("/admin");
       }
       console.log(res);
     } catch (err: any) {

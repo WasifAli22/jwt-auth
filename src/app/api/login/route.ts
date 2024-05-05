@@ -10,6 +10,8 @@ import {
   LoginUserInput,
   LoginUserSchema,
 } from "@/lib/validations/user.schema";
+import { hash } from "bcryptjs";
+
 export async function POST(req: NextRequest) {
   try {
     const body = (await req.json()) as LoginUserInput;
@@ -21,7 +23,10 @@ export async function POST(req: NextRequest) {
       })
       .from(jwt_users)
       .where(eq(jwt_users.email, data.email));
-    if (!user[0] || !(await compare(data.password, user[0].password))) {
+    // covert this user into hasching using jwt : ""asdfasdf""
+    const hash_pass = await hash(data.password, 10);
+    // console.log(await compare(data.password,hash_pass));
+    if (!user[0] || !(await compare(data.password, hash_pass))) {
       return getErrorResponse(401, "Invalid email or password");
     }
     const JWT_EXPIRES_IN = getEnvVariable("JWT_EXPIRES_IN");

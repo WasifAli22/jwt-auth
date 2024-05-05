@@ -17,7 +17,7 @@ export const middleware = async (request: NextRequest) => {
 
 
   if (pathname === "/login" || pathname === "/register" ) {
-    if (token) return NextResponse.redirect(`${origin}`);
+    if (token) return NextResponse.redirect(`${origin}/admin`);
     return NextResponse.next();
   }
 
